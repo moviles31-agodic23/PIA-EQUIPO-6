@@ -12,15 +12,7 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  { 
-    path: 'login', 
-    component: LoginComponent 
-  },
-  { 
-    path: '', 
-    redirectTo: '/login', 
-    pathMatch: 'full' 
-  },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({

@@ -8,17 +8,21 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { LoginComponent } from '../login/login.component';
 import { PerfilDeUsuarioComponent } from '../perfil-de-usuario/perfil-de-usuario.component';
+import { ToolbarComponent } from '../toolbar/toolbar.component';
+import { FeedComponent } from '../feed/feed.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
   ],
   declarations: [HomePage,
   LoginComponent,
-  PerfilDeUsuarioComponent
+  PerfilDeUsuarioComponent,
+  ToolbarComponent,
+  FeedComponent
   ]
 })
 export class HomePageModule {}
