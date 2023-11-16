@@ -6,17 +6,16 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-header collapse="condense">
+  <ion-toolbar>
+    <ion-title size="large">App-Fotos</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">App-Fotos</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <app-login></app-login>
-    <app-feed></app-feed>
-  </div>
+  <router-outlet></router-outlet>
 </ion-content>
-
-<app-toolbar></app-toolbar>
+<ion-footer>
+  <ion-toolbar>
+    <app-toolbar></app-toolbar>
+  </ion-toolbar>
+</ion-footer>

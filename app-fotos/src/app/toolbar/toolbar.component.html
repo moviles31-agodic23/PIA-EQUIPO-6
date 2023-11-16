@@ -1,18 +1,18 @@
 <ion-tabs *ngIf="authService.isAuthenticated">
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="inicio">
+    <ion-tab-button tab="inicio"  routerLink="/home/feed">
       <ion-icon name="home"></ion-icon>
     </ion-tab-button>
     <ion-tab-button tab="search">
       <ion-icon name="search"></ion-icon>
     </ion-tab-button>
-    <ion-tab-button tab="publicar-foto">
+    <ion-tab-button tab="publicar-foto"  routerLink="/home/publicar">
       <ion-icon name="add"></ion-icon>
     </ion-tab-button>
     <ion-tab-button tab="play-circle">
       <ion-icon name="play-circle"></ion-icon>
     </ion-tab-button>
-    <ion-tab-button tab="perfil-de-usuario">
+    <ion-tab-button tab="perfil-de-usuario"  routerLink="/home/perfil">
       <ion-icon name="person-circle"></ion-icon>
     </ion-tab-button>
   </ion-tab-bar>
