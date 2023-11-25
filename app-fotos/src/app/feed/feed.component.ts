@@ -23,10 +23,7 @@ export class FeedComponent implements OnInit {
 
   private generateItems() {
     const count = this.items.length + 1;
-    for (let i = 0; i < 50; i++) {
-      const randomN = Math.floor(Math.random() * 59) + 1;
-      this.items.push(`Usuario ${count + i}`);
-    }
+    for (let i = 0; i < 50; i++) {this.items.push(`Usuario ${count + i}`);}
   }
 
   onIonInfinite(ev: any) {

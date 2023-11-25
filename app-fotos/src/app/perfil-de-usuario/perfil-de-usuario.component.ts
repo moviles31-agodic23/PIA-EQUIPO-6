@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { InfiniteScrollCustomEvent } from '@ionic/angular';
 
 @Component({
   selector: 'app-perfil-de-usuario',
@@ -14,6 +15,22 @@ export class PerfilDeUsuarioComponent  implements OnInit {
     return this.authService.isAuthenticated;
   }
 
-  ngOnInit() {}
+  items: string[] = new Array<string>();
+
+  ngOnInit() {
+    this.generateItems();
+  }
+
+  private generateItems() {
+    const count = this.items.length + 1;
+    for (let i = 0; i < 50; i++) {this.items.push(`Usuario ${count + i}`);}
+  }
+
+  onIonInfinite(ev: any) {
+    this.generateItems();
+    setTimeout(() => {
+      (ev as InfiniteScrollCustomEvent).target.complete();
+    }, 500);
+  }
 
 }
