@@ -9,9 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 import { DetallePublicacionComponent } from './detalle-publicacion/detalle-publicacion.component';
+import { PublicarFotoComponent } from './publicar-foto/publicar-foto.component';
 
 @NgModule({
-  declarations: [AppComponent, EditarPerfilComponent, DetallePublicacionComponent],
+  declarations: [AppComponent, EditarPerfilComponent, DetallePublicacionComponent, PublicarFotoComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

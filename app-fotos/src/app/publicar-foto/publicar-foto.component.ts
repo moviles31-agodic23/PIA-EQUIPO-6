@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
+import { Directory, Filesystem } from '@capacitor/filesystem';
 
 @Component({
   selector: 'app-publicar-foto',
@@ -9,6 +11,16 @@ export class PublicarFotoComponent  implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    Camera.requestPermissions();
+  }
 
+  async tomarFoto() {
+    const image = await Camera.getPhoto({
+      quality: 90,
+      allowEditing: true,
+      resultType: CameraResultType.Uri,
+      source: CameraSource.Camera,
+    });
+  }
 }
