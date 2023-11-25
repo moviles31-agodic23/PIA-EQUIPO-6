@@ -1,8 +1,25 @@
-<ion-card > <!-- Mostrar solo si el usuario está autenticado -->
-  <ion-card-header>
-    Feed
-  </ion-card-header>
-  <ion-card-content>
-    Contenido del componente
-  </ion-card-content>
-</ion-card>
+<ion-content *ngIf="authService.isAuthenticated"> <!-- Mostrar solo si el usuario está autenticado -->
+  <ion-list>
+    <div *ngFor="let item of items; let index">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" />
+        </ion-avatar>
+        <ion-label>{{ item }}</ion-label>
+        <ion-icon name="ellipsis-horizontal" slot="end"></ion-icon>
+      </ion-item>
+      <img [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" style="width: 100%;" (dblclick)="toggleLike()"/>
+      <ion-item>
+        <ion-icon [name]="heartIcon" [color]="heartColor" (click)="toggleLike()" slot="start"></ion-icon>
+        <ion-icon name="chatbubble-outline" slot="start"></ion-icon>
+        <ion-icon name="paper-plane-outline" slot="start"></ion-icon>
+        <ion-icon [name]="bookmarkIcon" [color]="bookmarkColor" (click)="toggleBookmark()" slot="end"></ion-icon>
+      </ion-item>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt... more</p>
+      <p>N minutes ago</p>
+    </div>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
