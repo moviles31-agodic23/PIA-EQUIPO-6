@@ -48,5 +48,4 @@ export class FeedComponent implements OnInit {
     this.bookmarkIcon = this.bookmarkIcon === 'bookmark-outline' ? 'bookmark' : 'bookmark-outline';
     this.bookmarkColor = this.bookmarkIcon === 'bookmark-outline' ? 'medium' : 'warning';
   }
-
 }

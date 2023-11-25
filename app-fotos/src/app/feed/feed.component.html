@@ -5,18 +5,18 @@
         <ion-avatar slot="start">
           <img [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" />
         </ion-avatar>
-        <ion-label>{{ item }}</ion-label>
+        <ion-label style="font-family: 'Oswald', sans-serif;">{{ item }}</ion-label>
         <ion-icon name="ellipsis-horizontal" slot="end"></ion-icon>
       </ion-item>
-      <img [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" style="width: 100%;" />
+      <img [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" style="width: 100%;" routerLink="//home/detalle-publicacion"/>
       <ion-item>
         <ion-icon [name]="heartIcon" [color]="heartColor" (click)="toggleLike()" slot="start"></ion-icon>
         <ion-icon name="chatbubble-outline" slot="start"></ion-icon>
         <ion-icon name="paper-plane-outline" slot="start"></ion-icon>
         <ion-icon [name]="bookmarkIcon" [color]="bookmarkColor" (click)="toggleBookmark()" slot="end"></ion-icon>
       </ion-item>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt... more</p>
-      <p>N minutes ago</p>
+      <p style="font-family: 'Oswald', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt... more</p>
+      <p style="color: gray; font-family: 'Oswald', sans-serif;">30 minutes ago</p>
     </div>
   </ion-list>
   <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">

@@ -1,3 +1,26 @@
-<ion-content>
-  detalle works
+<ion-content *ngFor="let item of items; let index">
+  <ion-item>
+    <ion-avatar slot="start">
+      <img [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" />
+    </ion-avatar>
+    <ion-label>{{ item }}</ion-label>
+    <ion-icon name="ellipsis-horizontal" slot="end"></ion-icon>
+  </ion-item>
+  <img [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" style="width: 100%;"/>
+  <ion-item>
+    <ion-icon [name]="heartIcon" [color]="heartColor" (click)="toggleLike()" slot="start"></ion-icon>
+    <ion-icon name="chatbubble-outline" slot="start"></ion-icon>
+    <ion-icon name="paper-plane-outline" slot="start"></ion-icon>
+    <ion-icon [name]="bookmarkIcon" [color]="bookmarkColor" (click)="toggleBookmark()" slot="end"></ion-icon>
+  </ion-item>
+  <p style="font-family: 'Oswald', sans-serif;">100 likes</p>
+  <p style="font-family: 'Oswald', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt... more</p>
+  <p style="color: gray; font-family: 'Oswald', sans-serif;">View all 16 comments</p>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="https://th.bing.com/th/id/OIP.rc9GzXCr5hjY_SLvJBcBMgHaJ0?pid=ImgDet&w=180&h=180&c=7&dpr=1.3" alt="avatar" />
+    </ion-avatar>
+    <ion-input placeholder="Agregar un comentario"></ion-input>
+  </ion-item>
+  <p style="color: gray; font-family: 'Oswald', sans-serif;">30 minutes ago</p>
 </ion-content>

@@ -1,12 +1,12 @@
-<ion-tabs *ngIf="authService.isAuthenticated">
+<ion-tabs> <!--*ngIf="authService.isAuthenticated"-->
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="feed"  routerLink="./feed">>
+    <ion-tab-button tab="feed"  routerLink="./feed">
       <ion-icon name="home"></ion-icon>
     </ion-tab-button>
     <ion-tab-button tab="search">
       <ion-icon name="search"></ion-icon>
     </ion-tab-button>
-    <ion-tab-button tab="publicar-foto"  routerLink="./publicar-foto">>
+    <ion-tab-button tab="publicar-foto"  routerLink="./publicar-foto">
       <ion-icon name="add"></ion-icon>
     </ion-tab-button>
     <ion-tab-button tab="play-circle">

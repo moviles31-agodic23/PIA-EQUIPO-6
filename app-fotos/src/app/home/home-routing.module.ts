@@ -7,6 +7,7 @@ import { FeedComponent } from '../feed/feed.component';
 import { PublicarFotoComponent } from '../publicar-foto/publicar-foto.component';
 import { PerfilDeUsuarioComponent } from '../perfil-de-usuario/perfil-de-usuario.component';
 import { EditarPerfilComponent } from '../editar-perfil/editar-perfil.component';
+import { DetallePublicacionComponent } from '../detalle-publicacion/detalle-publicacion.component';
 
 const routes: Routes = [
   {
@@ -32,7 +33,11 @@ const routes: Routes = [
       {
         path: 'editar-perfil',
         component: EditarPerfilComponent,
-      }
+      },
+      {
+        path: 'detalle-publicacion',
+        component: DetallePublicacionComponent,
+      },
     ],
   }
 ];
