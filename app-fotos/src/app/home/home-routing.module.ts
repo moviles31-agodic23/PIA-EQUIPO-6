@@ -21,11 +21,11 @@ const routes: Routes = [
         component: FeedComponent,
       },
       {
-        path: 'publicar',
+        path: 'publicar-foto',
         component: PublicarFotoComponent,
       },
       {
-        path: 'perfil',
+        path: 'perfil-de-usuario',
         component: PerfilDeUsuarioComponent,
       }
     ],
