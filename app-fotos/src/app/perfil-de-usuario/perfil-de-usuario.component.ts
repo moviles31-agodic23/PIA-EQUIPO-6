@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { InfiniteScrollCustomEvent } from '@ionic/angular';
 
@@ -14,6 +14,8 @@ export class PerfilDeUsuarioComponent  implements OnInit {
   get isLoggedIn(): boolean {
     return this.authService.isAuthenticated;
   }
+
+  @Input() nombre: string = 'ruffles xd';
 
   items: string[] = new Array<string>();
 

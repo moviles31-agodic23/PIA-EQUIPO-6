@@ -6,6 +6,7 @@ import { LoginComponent } from '../login/login.component';
 import { FeedComponent } from '../feed/feed.component';
 import { PublicarFotoComponent } from '../publicar-foto/publicar-foto.component';
 import { PerfilDeUsuarioComponent } from '../perfil-de-usuario/perfil-de-usuario.component';
+import { EditarPerfilComponent } from '../editar-perfil/editar-perfil.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'perfil-de-usuario',
         component: PerfilDeUsuarioComponent,
+      },
+      {
+        path: 'editar-perfil',
+        component: EditarPerfilComponent,
       }
     ],
   }
